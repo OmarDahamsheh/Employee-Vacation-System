@@ -48,8 +48,7 @@ namespace Employee_Management_and_Vacation_Workflow_System
                 .HasForeignKey(vr => vr.VacationTypeId);
 
             modelBuilder.Entity<VacationRequest>()
-                .HasOne(vr=>vr.RequestS
-                tate)
+                .HasOne(vr=>vr.RequestState)
                 .WithMany(rs => rs.VacationRequests)
                 .HasForeignKey(vr => vr.RequestStateID);
         }
