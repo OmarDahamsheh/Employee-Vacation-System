@@ -10,12 +10,12 @@ namespace Employee_Management_and_Vacation_Workflow_System
 {
     public class EFDbContext : DbContext
     {
-        public DbSet<Department> Department { get; set; }
-        public DbSet<Position> Position { get; set; }
-        public DbSet<Employee> Employee { get; set; }
-        public DbSet<VacationType>VacationType { get; set; }
-        public DbSet<RequestState>RequestState { get; set; }
-        public DbSet<VacationRequest> VacationRequest { get; set; }
+        public DbSet<Department> Departments { get; set; }
+        public DbSet<Position> Positions { get; set; }
+        public DbSet<Employee> Employees { get; set; }
+        public DbSet<VacationType>VacationTypes { get; set; }
+        public DbSet<RequestState>RequestStates { get; set; }
+        public DbSet<VacationRequest> VacationRequests { get; set; }
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

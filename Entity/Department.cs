@@ -19,8 +19,8 @@ namespace Employee_Management_and_Vacation_Workflow_System.Entity
         public string DepartmentName { get; set; }
 
 
-        public Employee[] Employees { get; set; }
-        public Department( string DepartmentName) { 
+        public List<Employee> Employees { get; set; }
+        public Department(string DepartmentName) { 
             this.DepartmentName = DepartmentName;
         }
         public Department()

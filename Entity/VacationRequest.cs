@@ -44,6 +44,16 @@ namespace Employee_Management_and_Vacation_Workflow_System.Entity
         public string? ApprovedByEmployeeId { get; set;}
         public string? DeclinedByEmployeeId { get; set;}
 
+        public VacationRequest(DateTime RequestSubmissionDate, string Description, string EmployeeNumber, string VacationTypeId, DateOnly StartDate, DateOnly EndDate, int TotalVacationDays, int RequestStateID) {
+            this.RequestSubmissionDate = RequestSubmissionDate;
+            this.Description = Description;
+            this.EmployeeNumber = EmployeeNumber;
+            this.VacationTypeId = VacationTypeId;
+            this.StartDate = StartDate;
+            this.EndDate = EndDate;
+            this.TotalVacationDays = TotalVacationDays;
+            this.RequestStateID = RequestStateID;
+        }
         public VacationRequest()
         { 
         }
