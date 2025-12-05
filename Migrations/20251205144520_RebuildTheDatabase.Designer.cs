@@ -4,6 +4,7 @@ using Employee_Management_and_Vacation_Workflow_System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Employee_Management_and_Vacation_Workflow_System.Migrations
 {
     [DbContext(typeof(EFDbContext))]
-    partial class EFDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251205144520_RebuildTheDatabase")]
+    partial class RebuildTheDatabase
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -37,7 +40,7 @@ namespace Employee_Management_and_Vacation_Workflow_System.Migrations
 
                     b.HasKey("DepartmentId");
 
-                    b.ToTable("Departments");
+                    b.ToTable("Department");
                 });
 
             modelBuilder.Entity("Employee_Management_and_Vacation_Workflow_System.Entity.Employee", b =>
@@ -78,7 +81,7 @@ namespace Employee_Management_and_Vacation_Workflow_System.Migrations
 
                     b.HasIndex("PositionId");
 
-                    b.ToTable("Employees");
+                    b.ToTable("Employee");
                 });
 
             modelBuilder.Entity("Employee_Management_and_Vacation_Workflow_System.Entity.Position", b =>
@@ -96,7 +99,7 @@ namespace Employee_Management_and_Vacation_Workflow_System.Migrations
 
                     b.HasKey("PositionId");
 
-                    b.ToTable("Positions");
+                    b.ToTable("Position");
                 });
 
             modelBuilder.Entity("Employee_Management_and_Vacation_Workflow_System.Entity.RequestState", b =>
@@ -114,7 +117,7 @@ namespace Employee_Management_and_Vacation_Workflow_System.Migrations
 
                     b.HasKey("StateId");
 
-                    b.ToTable("RequestStates");
+                    b.ToTable("RequestState");
                 });
 
             modelBuilder.Entity("Employee_Management_and_Vacation_Workflow_System.Entity.VacationRequest", b =>
@@ -168,7 +171,7 @@ namespace Employee_Management_and_Vacation_Workflow_System.Migrations
 
                     b.HasIndex("VacationTypeId");
 
-                    b.ToTable("VacationRequests");
+                    b.ToTable("VacationRequest");
                 });
 
             modelBuilder.Entity("Employee_Management_and_Vacation_Workflow_System.Entity.VacationType", b =>
@@ -184,7 +187,7 @@ namespace Employee_Management_and_Vacation_Workflow_System.Migrations
 
                     b.HasKey("VacationTypeId");
 
-                    b.ToTable("VacationTypes");
+                    b.ToTable("VacationType");
                 });
 
             modelBuilder.Entity("Employee_Management_and_Vacation_Workflow_System.Entity.Employee", b =>
