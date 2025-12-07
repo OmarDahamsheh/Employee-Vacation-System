@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Employee_Management_and_Vacation_Workflow_System.UpdateVacationDaysBalance
+namespace Employee_Management_and_Vacation_Workflow_System.RequestsOperations
 {
-    public class VacationBalance : VacationBalanceIterface
+    public class VacationBalance
     {
-        public void UpdateVacationDaysBalance(EFDbContext DbContext, int VacationRequestId)
+        public void UpdateVacationDaysBalance(EFDbContext DbContext, int vacationRequestId)
         {
 
             var vacation = DbContext.VacationRequests
-                .FirstOrDefault(vr => vr.RequestId == VacationRequestId);
+                .FirstOrDefault(vr => vr.RequestId == vacationRequestId);
 
             if (vacation == null) throw new Exception("There is no request with this ID");
 
@@ -31,7 +31,7 @@ namespace Employee_Management_and_Vacation_Workflow_System.UpdateVacationDaysBal
 
             if (vacation.RequestStateID == 2)
             {
-                if (employee.VacationDaysLeft == 0) throw new Exception("The employee has use all the vacation days");
+                if (employee.VacationDaysLeft == 0) throw new Exception("The employee has used all the vacation days");
                 else if (employee.VacationDaysLeft < vacation.TotalVacationDays) throw new Exception("the number of requested days is greater than the vacation days left");
                 else employee.VacationDaysLeft -= vacation.TotalVacationDays;
             }

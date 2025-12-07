@@ -25,7 +25,7 @@ namespace Employee_Management_and_Vacation_Workflow_System.Entity
         public int DepartmentId { get; set; }
         public Department Department { get; set; }
 
-        public VacationRequest[] VacationRequests { get; set; }
+        public List<VacationRequest> VacationRequests { get; set; }
 
         [Required]
         public int PositionId { get; set; }

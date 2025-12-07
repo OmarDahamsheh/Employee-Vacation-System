@@ -44,7 +44,7 @@ namespace Employee_Management_and_Vacation_Workflow_System.Entity
         public string? ApprovedByEmployeeId { get; set;}
         public string? DeclinedByEmployeeId { get; set;}
 
-        public VacationRequest(DateTime RequestSubmissionDate, string Description, string EmployeeNumber, string VacationTypeId, DateOnly StartDate, DateOnly EndDate, int TotalVacationDays, int RequestStateID) {
+        public VacationRequest(DateTime RequestSubmissionDate, string Description, string EmployeeNumber, string VacationTypeId, DateOnly StartDate, DateOnly EndDate, int TotalVacationDays, int RequestStateID, string ApprovedBy, string DeclinedBy) {
             this.RequestSubmissionDate = RequestSubmissionDate;
             this.Description = Description;
             this.EmployeeNumber = EmployeeNumber;
@@ -53,6 +53,8 @@ namespace Employee_Management_and_Vacation_Workflow_System.Entity
             this.EndDate = EndDate;
             this.TotalVacationDays = TotalVacationDays;
             this.RequestStateID = RequestStateID;
+            this.ApprovedByEmployeeId = ApprovedBy;
+            this.DeclinedByEmployeeId = DeclinedBy;
         }
         public VacationRequest()
         { 
