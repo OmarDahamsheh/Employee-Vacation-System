@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Employee_Management_and_Vacation_Workflow_System.Entity;
 
-namespace Employee_Management_and_Vacation_Workflow_System.AddInitialPositions
+namespace Employee_Management_and_Vacation_Workflow_System.InitialDatabase
 {
-    public class InitialPositions : PositionsInterface
+    public class InitialPositions
     {
         public void AddPositions(EFDbContext DbContext)
         {

@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Employee_Management_and_Vacation_Workflow_System.Entity;
 
-namespace Employee_Management_and_Vacation_Workflow_System.InitialDepartments
+namespace Employee_Management_and_Vacation_Workflow_System.InitialDatabase
 {
-    public class AddInitialDepartments : DepartmentsInterface
+    public class AddInitialDepartments
     {
         public void AddDepartments(EFDbContext DbContext)
         {

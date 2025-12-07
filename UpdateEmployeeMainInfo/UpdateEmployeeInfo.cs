@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Employee_Management_and_Vacation_Workflow_System.UpdateEmployeeMainInfo
 {
-    public class UpdateEmployeeInfo : UpdateEmployeeInfoInterface
+    public class UpdateEmployeeInfo
     {
         public void UpdateEmployeeMainInfo(EFDbContext DbContext, string EmployeeNo, string newName, int newDepartmentId, int newPositionId, decimal newSalary)
         {
